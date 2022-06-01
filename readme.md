@@ -9,10 +9,17 @@ Additional libraries used:
 
 As there was no mention of securing the end points, I've opted to keep them open to avoid unnecessary complexity.
 
+## Assumptions:
+- No endpoint security
+- Dictionary entry validation; Alphas, hyphen and space only
+- Text scan loos for full ords matching dictionary entries
+
 ## How to run:
 Requirements:
 - Java 8 (or higher)
 - Apache Maven
+
+## How to run:
 
 Run the project as follows:
 - In a new console, navigate to project root
