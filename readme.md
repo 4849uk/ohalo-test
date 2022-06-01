@@ -12,7 +12,7 @@ As there was no mention of securing the end points, I've opted to keep them open
 ## Assumptions:
 - No endpoint security
 - Dictionary entry validation; Alphas, hyphen and space only
-- Text scan loos for full ords matching dictionary entries
+- Text scan identifies full words matching dictionary entries, no partial word matching
 
 ## How to run:
 Requirements:
