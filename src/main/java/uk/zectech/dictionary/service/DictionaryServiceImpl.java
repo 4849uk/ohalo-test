@@ -89,6 +89,7 @@ public class DictionaryServiceImpl implements DictionaryService {
 	}
 
 	@Override
+	@Transactional(propagation = Propagation.REQUIRED, readOnly = true)
 	public List<DictionaryScanResponse> scan(final Long id, final String target) {
 		LOGGER.debug("scanning dictionary: id {}, target {}", id, target);
 		final Optional<Dictionary> dictionary = this.dictionaryRepository.findById(id);

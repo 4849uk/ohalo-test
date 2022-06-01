@@ -74,7 +74,7 @@ public class DictionaryController implements DictionaryContract {
 	@Override
 	@GetMapping(path = "/{id}/scan")
 	public ResponseEntity<List<DictionaryScanResponse>> scan(@PathVariable(name = "id", required = true) Long id,
-			@RequestParam(name = "target", required = true) String target) {
+			@RequestParam(name = "target", required = true) final String target) {
 		LOGGER.debug("scan dictionary : id {}, target {}", id, target);
 		return new ResponseEntity<>(dictionaryService.scan(id, target), HttpStatus.OK);
 	}

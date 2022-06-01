@@ -84,7 +84,7 @@ public class DictionaryMapperTest {
 	@Test
 	public void shouldSuccessfullyMapFromDictionaryRequestToDictionary() {
 		DictionaryRequest request = new DictionaryRequest();
-		request.setCaseSensitive(Boolean.FALSE);
+		request.setCaseSensitive(Boolean.TRUE);
 		request.setEntries(new HashSet<>());
 		request.getEntries().add("first");
 		request.getEntries().add("second");

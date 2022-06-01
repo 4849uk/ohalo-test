@@ -11,7 +11,7 @@ import uk.zectech.dictionary.api.response.DictionaryResponse;
 import uk.zectech.dictionary.domain.Dictionary;
 
 /**
- * Utility componet used to map the Dictionary entity to and from various
+ * Utility component used to map the Dictionary entity to and from various
  * formats.
  * 
  * @author Michael Conway
@@ -29,7 +29,7 @@ public class DictionaryMapper {
 	public DictionaryResponse mapToDictionaryResponse(final Dictionary dictionary) {
 		final DictionaryResponse response = new DictionaryResponse();
 		response.setId(dictionary.getId());
-		response.setCaseSensitive(Boolean.valueOf(dictionary.isCaseSensitive()));
+		response.setCaseSensitive(dictionary.isCaseSensitive());
 		if (dictionary.getEntries() != null) {
 			response.setEntries(new HashSet<String>());
 			dictionary.getEntries().forEach(entry -> response.getEntries().add(entry));
@@ -62,6 +62,7 @@ public class DictionaryMapper {
 			dictionary.setEntries(new HashSet<String>());
 			request.getEntries().forEach(entry -> dictionary.getEntries().add(entry));
 		}
+		dictionary.setCaseSensitive(request.isCaseSensitive().booleanValue());
 		return dictionary;
 	}
 

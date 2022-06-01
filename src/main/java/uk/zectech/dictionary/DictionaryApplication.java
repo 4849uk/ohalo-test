@@ -10,6 +10,12 @@ import uk.zectech.dictionary.mapping.DictionaryMapper;
 import uk.zectech.dictionary.repository.DictionaryRepository;
 import uk.zectech.dictionary.service.DictionaryService;
 
+/**
+ * Boot executable class.
+ * 
+ * @author Michael Conway
+ *
+ */
 @SpringBootApplication
 @EnableWebMvc
 @ComponentScan(basePackageClasses = { DictionaryController.class, DictionaryRepository.class, DictionaryService.class,

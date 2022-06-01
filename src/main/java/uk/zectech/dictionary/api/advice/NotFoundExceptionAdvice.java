@@ -25,7 +25,7 @@ public class NotFoundExceptionAdvice {
 	 */
 	@ExceptionHandler({ NotFoundException.class })
 	public ResponseEntity<Void> handleNotFoundException() {
-		return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
+		return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 
 }
